@@ -1,0 +1,110 @@
+$progress_width: 40rem;
+$progress_height: 0.5rem;
+$progress_color: #3498db;
+$circle_width: 2.8rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.625rem;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+
+  width: $progress_width;
+  height: $progress_height;
+  margin-bottom: 5rem;
+
+  background-color: #eee;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .circle {
+    z-index: 10;
+    width: $circle_width;
+    height: $circle_width;
+
+    border: 0.3rem solid rgb(207, 207, 207);
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+    color: rgb(48, 48, 48);
+    background-color: #eee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.1s linear;
+    // transition-delay: 0.3s;
+
+    &.active {
+      border-color: $progress_color;
+    }
+  }
+
+  & .progress {
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+
+    background-color: $progress_color;
+
+    transition: width 0.3s linear;
+  }
+}
+
+.button-container {
+  width: $progress_width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .button {
+    width: 10rem;
+    height: 3rem;
+
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &.active {
+      cursor: pointer;
+      background-color: #3498db;
+    }
+  }
+}
