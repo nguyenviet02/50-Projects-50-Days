@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.625rem;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .split-left,
+.container .split-right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: width 1s ease-in-out;
+}
+.container .split-left h1,
+.container .split-right h1 {
+  color: #fff;
+  font-size: 6rem;
+  line-height: 6rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+.container .split-left button,
+.container .split-right button {
+  width: 25rem;
+  height: 8rem;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: transparent;
+  border: 0.5rem solid #fff;
+}
+.container .split-left:hover,
+.container .split-right:hover {
+  width: 100vw;
+}
+.container .split-left::before,
+.container .split-right::before {
+  content: "";
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container .split-left {
+  background-image: url("https://50projects50days.com/projects/split-landing-page/ps.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.container .split-left button:hover {
+  background-color: rgb(106, 0, 255);
+  color: #fff;
+  border-color: rgb(106, 0, 255);
+}
+.container .split-left::before {
+  background-color: rgb(106, 0, 255);
+}
+.container .split-right {
+  background-image: url("https://50projects50days.com/projects/split-landing-page/xbox.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.container .split-right button:hover {
+  background-color: rgb(0, 255, 30);
+  border-color: rgb(0, 255, 30);
+  color: #fff;
+}
+.container .split-right::before {
+  background-color: rgb(8, 120, 21);
+}
+
+/*# sourceMappingURL=style.css.map */
