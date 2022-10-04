@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.625rem;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8e44ad;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter_list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 13rem;
+}
+.counter_list .counter_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.counter_list .counter_item_logo {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+.counter_list .counter_item_number {
+  font-family: "Roboto Mono", monospace;
+  font-size: 6rem;
+  margin: 3rem 0;
+}
+.counter_list .counter_item_title {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
